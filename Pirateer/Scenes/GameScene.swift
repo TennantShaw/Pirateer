@@ -24,6 +24,7 @@ class GameScene: SKScene {
     
     
     func touchDown(atPoint pos : CGPoint) {
+        
     }
     
     func touchMoved(toPoint pos : CGPoint) {
@@ -33,6 +34,9 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches {
+            touchUp(atPoint: touch.location(in: self))
+        }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -62,5 +66,13 @@ class GameScene: SKScene {
         }
         
         self.lastUpdateTime = currentTime
+    }
+    
+    //MARK: Methods
+    
+    // This returns a space with the specified name
+    func spaceWithName(name:String) -> SKSpriteNode? {
+        let space:SKSpriteNode? = self.childNode(withName: name) as! SKSpriteNode?
+        return space
     }
 }

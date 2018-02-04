@@ -12,6 +12,7 @@ import GameplayKit
 
 class GameViewController: UIViewController {
 
+    //MARK: ViewLifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
