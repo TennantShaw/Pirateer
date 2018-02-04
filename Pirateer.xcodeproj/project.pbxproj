@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		FF00CE6E2023462300BAB6A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00CE6D2023462300BAB6A8 /* AppDelegate.swift */; };
 		FF00CE702023462300BAB6A8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = FF00CE6F2023462300BAB6A8 /* GameScene.sks */; };
-		FF00CE722023462300BAB6A8 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = FF00CE712023462300BAB6A8 /* Actions.sks */; };
 		FF00CE742023462300BAB6A8 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00CE732023462300BAB6A8 /* GameScene.swift */; };
 		FF00CE762023462300BAB6A8 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00CE752023462300BAB6A8 /* GameViewController.swift */; };
 		FF00CE792023462300BAB6A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF00CE772023462300BAB6A8 /* Main.storyboard */; };
@@ -32,7 +31,6 @@
 		FF00CE6A2023462300BAB6A8 /* Pirateer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pirateer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF00CE6D2023462300BAB6A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF00CE6F2023462300BAB6A8 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		FF00CE712023462300BAB6A8 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		FF00CE732023462300BAB6A8 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		FF00CE752023462300BAB6A8 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		FF00CE782023462300BAB6A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,15 +81,11 @@
 		FF00CE6C2023462300BAB6A8 /* Pirateer */ = {
 			isa = PBXGroup;
 			children = (
-				FF00CE6D2023462300BAB6A8 /* AppDelegate.swift */,
-				FF00CE6F2023462300BAB6A8 /* GameScene.sks */,
-				FF00CE712023462300BAB6A8 /* Actions.sks */,
-				FF00CE732023462300BAB6A8 /* GameScene.swift */,
-				FF00CE752023462300BAB6A8 /* GameViewController.swift */,
-				FF00CE772023462300BAB6A8 /* Main.storyboard */,
-				FF00CE7A2023462300BAB6A8 /* Assets.xcassets */,
-				FF00CE7C2023462300BAB6A8 /* LaunchScreen.storyboard */,
-				FF00CE7F2023462300BAB6A8 /* Info.plist */,
+				FF0985AE202763480061B082 /* iOS */,
+				FF0985AC202762E80061B082 /* Scenes */,
+				FF0985B1202764570061B082 /* Entities */,
+				FF0985B22027645E0061B082 /* Components */,
+				FF0985AD202763220061B082 /* Assets */,
 			);
 			path = Pirateer;
 			sourceTree = "<group>";
@@ -103,6 +97,65 @@
 				FF00CE8A2023462300BAB6A8 /* Info.plist */,
 			);
 			path = PirateerTests;
+			sourceTree = "<group>";
+		};
+		FF0985AC202762E80061B082 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FF00CE732023462300BAB6A8 /* GameScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FF0985AD202763220061B082 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				FF0985B0202763C40061B082 /* Scenes */,
+				FF00CE7A2023462300BAB6A8 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		FF0985AE202763480061B082 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				FF00CE6D2023462300BAB6A8 /* AppDelegate.swift */,
+				FF00CE752023462300BAB6A8 /* GameViewController.swift */,
+				FF00CE772023462300BAB6A8 /* Main.storyboard */,
+				FF00CE7C2023462300BAB6A8 /* LaunchScreen.storyboard */,
+				FF0985AF202763670061B082 /* Supporting Files */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		FF0985AF202763670061B082 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF00CE7F2023462300BAB6A8 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF0985B0202763C40061B082 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FF00CE6F2023462300BAB6A8 /* GameScene.sks */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FF0985B1202764570061B082 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		FF0985B22027645E0061B082 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,7 +245,6 @@
 				FF00CE702023462300BAB6A8 /* GameScene.sks in Resources */,
 				FF00CE7B2023462300BAB6A8 /* Assets.xcassets in Resources */,
 				FF00CE7E2023462300BAB6A8 /* LaunchScreen.storyboard in Resources */,
-				FF00CE722023462300BAB6A8 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
