@@ -7,72 +7,40 @@
 //
 
 import SpriteKit
-import GameplayKit
 
 class GameScene: SKScene {
+    var gameTitle = SKSpriteNode()
+    var gameSubtitle = SKSpriteNode()
+    var playButton = SKSpriteNode()
+    var buttonBackground = SKSpriteNode()
+    //  TODO:  var logoImage = SKSpriteNode() need to find an image to use before implementing this.
     
-    var entities = [GKEntity]()
-    var graphs = [String : GKGraph]()
-    
-    private var lastUpdateTime : TimeInterval = 0
-    private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
-    
-    override func sceneDidLoad() {
-        self.lastUpdateTime = 0
+    override func didMove(to view: SKView) {
+        createScene()
     }
     
-    
-    func touchDown(atPoint pos : CGPoint) {
+    func createScene() {
+        let background = SKSpriteNode(imageNamed: "PirateerOpeningSceneBackground")
+        background.anchorPoint = CGPoint.init(x: 0, y: 0)
+        background.position = CGPoint(x: 0, y: 0)
+        background.name = "gameBoard"
+        background.size = (self.view?.bounds.size)!
+        self.addChild(background)
         
-    }
-    
-    func touchMoved(toPoint pos : CGPoint) {
-    }
-    
-    func touchUp(atPoint pos : CGPoint) {
+        createTitle()
+        createSubtitle()
+        createPlayButton()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
-            touchUp(atPoint: touch.location(in: self))
+            let location = touch.location(in: self)
+            if playButton.contains(location) {
+                let reveal = SKTransition.reveal(with: .down, duration: 1)
+                let newScene = BoardScene(size: CGSize(width: 1334, height: 750))
+                scene?.view?.presentScene(newScene, transition: reveal)
+            }
         }
     }
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-    }
-    
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-    }
-    
-    
-    override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
-        
-        // Initialize _lastUpdateTime if it has not already been
-        if (self.lastUpdateTime == 0) {
-            self.lastUpdateTime = currentTime
-        }
-        
-        // Calculate time since last update
-        let dt = currentTime - self.lastUpdateTime
-        
-        // Update entities
-        for entity in self.entities {
-            entity.update(deltaTime: dt)
-        }
-        
-        self.lastUpdateTime = currentTime
-    }
-    
-    //MARK: Methods
-    
-    // This returns a space with the specified name
-    func spaceWithName(name:String) -> SKSpriteNode? {
-        let space:SKSpriteNode? = self.childNode(withName: name) as! SKSpriteNode?
-        return space
-    }
+
 }

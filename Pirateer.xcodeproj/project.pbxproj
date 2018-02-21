@@ -15,9 +15,10 @@
 		FF00CE7B2023462300BAB6A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF00CE7A2023462300BAB6A8 /* Assets.xcassets */; };
 		FF00CE7E2023462300BAB6A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF00CE7C2023462300BAB6A8 /* LaunchScreen.storyboard */; };
 		FF00CE892023462300BAB6A8 /* PirateerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF00CE882023462300BAB6A8 /* PirateerTests.swift */; };
-		FF0985B8202765FE0061B082 /* PlayerPieces.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0985B7202765FE0061B082 /* PlayerPieces.swift */; };
 		FF0985BA202766430061B082 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FF0985B9202766430061B082 /* Default-568h@2x.png */; };
-		FF0985BC20276ABC0061B082 /* PirateCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0985BB20276ABC0061B082 /* PirateCoin.swift */; };
+		FF4E2B70203CA79000308848 /* GameElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4E2B6F203CA79000308848 /* GameElements.swift */; };
+		FF4E2B72203CE3B500308848 /* BoardScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4E2B71203CE3B500308848 /* BoardScene.swift */; };
+		FF4E2B74203CF91E00308848 /* BoardScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = FF4E2B73203CF91E00308848 /* BoardScene.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,9 +44,10 @@
 		FF00CE842023462300BAB6A8 /* PirateerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PirateerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF00CE882023462300BAB6A8 /* PirateerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PirateerTests.swift; sourceTree = "<group>"; };
 		FF00CE8A2023462300BAB6A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF0985B7202765FE0061B082 /* PlayerPieces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPieces.swift; sourceTree = "<group>"; };
 		FF0985B9202766430061B082 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		FF0985BB20276ABC0061B082 /* PirateCoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PirateCoin.swift; sourceTree = "<group>"; };
+		FF4E2B6F203CA79000308848 /* GameElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameElements.swift; sourceTree = "<group>"; };
+		FF4E2B71203CE3B500308848 /* BoardScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScene.swift; sourceTree = "<group>"; };
+		FF4E2B73203CF91E00308848 /* BoardScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BoardScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +91,6 @@
 			children = (
 				FF0985AE202763480061B082 /* iOS */,
 				FF0985AC202762E80061B082 /* Scenes */,
-				FF0985B1202764570061B082 /* Entities */,
-				FF0985B22027645E0061B082 /* Components */,
 				FF0985AD202763220061B082 /* Assets */,
 			);
 			path = Pirateer;
@@ -109,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				FF00CE732023462300BAB6A8 /* GameScene.swift */,
+				FF4E2B71203CE3B500308848 /* BoardScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -128,6 +129,7 @@
 			children = (
 				FF00CE6D2023462300BAB6A8 /* AppDelegate.swift */,
 				FF00CE752023462300BAB6A8 /* GameViewController.swift */,
+				FF4E2B6F203CA79000308848 /* GameElements.swift */,
 				FF00CE772023462300BAB6A8 /* Main.storyboard */,
 				FF00CE7C2023462300BAB6A8 /* LaunchScreen.storyboard */,
 				FF0985AF202763670061B082 /* Supporting Files */,
@@ -147,24 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				FF00CE6F2023462300BAB6A8 /* GameScene.sks */,
+				FF4E2B73203CF91E00308848 /* BoardScene.sks */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		FF0985B1202764570061B082 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				FF0985B7202765FE0061B082 /* PlayerPieces.swift */,
-				FF0985BB20276ABC0061B082 /* PirateCoin.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		FF0985B22027645E0061B082 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +240,7 @@
 				FF00CE792023462300BAB6A8 /* Main.storyboard in Resources */,
 				FF00CE702023462300BAB6A8 /* GameScene.sks in Resources */,
 				FF00CE7B2023462300BAB6A8 /* Assets.xcassets in Resources */,
+				FF4E2B74203CF91E00308848 /* BoardScene.sks in Resources */,
 				FF0985BA202766430061B082 /* Default-568h@2x.png in Resources */,
 				FF00CE7E2023462300BAB6A8 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -272,11 +260,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF0985BC20276ABC0061B082 /* PirateCoin.swift in Sources */,
+				FF4E2B70203CA79000308848 /* GameElements.swift in Sources */,
 				FF00CE742023462300BAB6A8 /* GameScene.swift in Sources */,
+				FF4E2B72203CE3B500308848 /* BoardScene.swift in Sources */,
 				FF00CE762023462300BAB6A8 /* GameViewController.swift in Sources */,
 				FF00CE6E2023462300BAB6A8 /* AppDelegate.swift in Sources */,
-				FF0985B8202765FE0061B082 /* PlayerPieces.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
